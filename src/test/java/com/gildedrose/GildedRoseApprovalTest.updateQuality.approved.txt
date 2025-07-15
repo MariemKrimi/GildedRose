@@ -1,0 +1,5 @@
+items result[0] = a common item, -1, 0
+items result[1] = a common item1, -1, 0
+items result[2] = Backstage passes to a TAFKAL80ETC concert, -1, 0
+items result[3] = a common item3, -2, 0
+items result[4] = Aged Brie, -2, 32
