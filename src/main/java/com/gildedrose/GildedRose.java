@@ -8,7 +8,7 @@ public class GildedRose {
     }
 
     public void updateQuality() {
-		if items == null || items.isEmpty(){
+		if (items == null || items.isEmpty()){
 			return; 
 		}
 		
