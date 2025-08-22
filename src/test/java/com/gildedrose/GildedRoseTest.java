@@ -2,31 +2,34 @@ package com.gildedrose;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
 
     @Test
     void testQualiteDiminueNormalement() {
-        Item[] items = new Item[] { new Item("Produit normal", 10, 20) };
+        //List<Item> items = new Item[] { new Item("Produit normal", 10, 20) };
+        List<Item> items = List.of(new Item("Produit normal", 10, 20))
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(19, items[0].quality);
-        assertEquals(9, items[0].sellIn);
+        assertEquals(19, items.get(0).quality);
+        assertEquals(9, items.get(0).sellIn);
     }
 
     @Test
     void testQualiteDiminueDoubleApresDate() {
-        Item[] items = new Item[] { new Item("Produit normal", 0, 20) };
+        List<Item> items = List.of( new Item("Produit normal", 0, 20) );
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(18, items[0].quality);
-        assertEquals(-1, items[0].sellIn);
+        assertEquals(18, items.get(0).quality);
+        assertEquals(-1, items.get(0).sellIn);
     }
 
     @Test
     void testQualiteNeDevientPasNegative() {
-        Item[] items = new Item[] { new Item("Produit normal", 5, 0) };
+        List<Item> items = List.of( new Item("Produit normal", 5, 0) );
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertEquals(0, items[0].quality);
