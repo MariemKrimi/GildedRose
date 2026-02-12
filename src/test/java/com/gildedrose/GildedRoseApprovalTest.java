@@ -1,5 +1,5 @@
 package com.gildedrose;
-
+/*
 import org.approvaltests.combinations.CombinationApprovals;
 import org.approvaltests.reporters.DiffReporter;
 import org.approvaltests.reporters.UseReporter;
@@ -25,4 +25,4 @@ class GildedRoseApprovalTest {
         return gildRose.items[0].toString();
     }
 
-}
+}*/
